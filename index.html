@@ -1,188 +1,257 @@
 <!DOCTYPE html>
+<html lang="uz-UZ">
 
-<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bosh sahifa</title>
+    
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
 
-    <!--Head section-->
-    <head>
-        <title>Bosh sahifa</title>
-
-        <!-- Meta tags -->
-	    <meta charset="UTF-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-	    <link rel="stylesheet" href="styles/style.css">
-    </head>
-
-    <!--Body section-->
-    <body>
-        <!--Form section-->
-        <form action="#" autocomplete="on" method="POST">
-            <!--Personal information section-->
+<body>
+    <div class="container">
+        <!--FORM SECTION-->
+        <form class="form" action="https://echo.htmlacademy.ru/" autocomplete="on" method="POST">
+            <h1 class="form__title">Anketa</h1>
+            
+            <!-- PERSONAL INFO -->
             <div class="personal-info">
-                <h2>Shaxsiy ma'lumotlar</h2> <hr>
+                <h2 class="personal-info__title">Shaxsiy ma'lumotlar</h2>
+                
                 <div class="form-group">
-                    <label for="fname">Ism</label><br>
-                    <input type="text" id="fname" name="fname" placeholder="Ismingizni yozing" title="Ismingizni yozing!" required>
-                </div> <br>
-
-                <div class="form-group">
-                    <label for="lname">Familiya</label><br>
-                    <input type="text" id="lname" name="lname" placeholder="Familiyangizni yozing" title="Familiyangizni yozing!" required>
-                </div> <br>
-
-                <div class="form-group">
-                    <label for="region">Viloyat:</label>
-                    <select id="region" name="region" title="Viloyatingizni tanlang!" required>
-                        <option value="andijon">Andijon</option>
-                        <option value="buxoro">Buxoro</option>
-                        <option value="fargona">Farg'ona</option>
-                        <option value="qashqadaryo">Qashqadaryo</option>
-                        <option value="andijon">Xorazm</option>
-                        <option value="namangan">Namangan</option>
-                        <option value="navoiy">Navoiy</option>
-                        <option value="samarqand">Samarqand</option>
-                        <option value="surxondaryo">Surxondaryo</option>
-                        <option value="sirdaryo">Sirdaryo</option>
-                        <option value="toshkent">Toshkent</option>
-                    </select>
-                </div> <br>
-
-                <div class="form-group">
-                    <label for="city">Shaxar</label> <br>
-                    <input type="text" id="city" name="city" placeholder="Shaxringizni yozing" title="Shaxringizni yozing!" required>
-                </div> <br>
-
-                <div class="form-group">
-                    <label for="loc">Yashash manzili</label><br>
-                    <input type="text" id="loc" name="location" placeholder="Manzilingizni yozing" title="Yashash manzilingizni yozing!" required>
-                </div> <br>
-
-                <div class="form-group">
-                    <label for="post">Pochta indeksi</label><br>
-                    <input type="number" id="post" name="post" placeholder="1234" title="Pochta indeksingizni yozing!" required>
-                </div> <br>
-
-                <div class="form-group">
-                    <label for="phone">Telefon raqami</label><br>
-                    <input type="tel" id="phone" name="phone" pattern="^\+998\d{9}$" placeholder="+998 xxx xx xx" title="Telefon raqamingizni yozing!" required>
-                </div> <br>
-
-                <div class="form-group">
-                    <label for="email">Elektron pochta</label><br>
-                    <input type="email" id="email" name="email" placeholder="john@mail.com" title="Elektron pochtangizni yozing!" required>
-                </div> <br>
-
-                <div class="gender">
-                    <label>Jinsingizni tanlang:</label> <br>
-                    <input type="radio" id="erkak" name="gender" value="Erkak">
-                    <label for="erkak">Erkak</label>
-
-                    <input type="radio" id="ayol" name="gender" value="Ayol">
-                    <label for="ayol">Ayol</label>
+                    <label class="input-label" for="fname">Ism</label>
+                    <input class="form-input" type="text" id="fname" name="fname" placeholder="Ismingizni yozing" title="Ismingizni yozing!" required>
                 </div>
-            </div> <hr>
-
-            <!-- Evaluation section -->
-             <div class="evaluation">
-                <h2>Mehmonxona xizmatlarini baholang</h2>
-
-                <!-- Overall Experience -->
-                <fieldset>
-                    <legend>Mehmonxona sifati (Umumiy)</legend>
-
+                
+                <div class="form-group">
+                    <label class="input-label" for="lname">Familiya</label>
+                    <input class="form-input" type="text" id="lname" name="lname" placeholder="Familiyangizni yozing" title="Familiyangizni yozing!" required>
+                </div>
+                
+                <div class="form-group gender">
+                    <label class="gender__label">Jinsingiz:</label>
+                    
+                    <div class="gender__wrapper">
+                        <input class="gender__input" type="radio" id="erkak" name="gender" value="erkak" required>
+                        <label class="gender__label" for="erkak">Erkak</label>
+                    </div>
+                    
+                    <div class="gender__wrapper">
+                        <input class="gender__input" type="radio" id="ayol" name="gender" value="ayol">
+                        <label class="gender__label" for="ayol">Ayol</label>
+                    </div>
+                </div>
+            </div>
+            <!-- /PERSONAL INFO -->
+            
+            <!-- ADDRESS -->
+            <div class="address">
+                <h2 class="address__title">Yashash manzili</h2>
+                
+                <div class="form-group">
+                    <label class="select-label" for="region">Viloyat</label>
+                    
+                    <select class="form-select" id="region" name="region" title="Viloyatingizni tanlang!" required>
+                        <option class="select-option" value="" selected>Viloyatingizni tanlang!</option>
+                        <option class="select-option" value="andijon">Andijon</option>
+                        <option class="select-option" value="buxoro">Buxoro</option>
+                        <option class="select-option" value="fargona">Farg'ona</option>
+                        <option class="select-option" value="qashqadaryo">Qashqadaryo</option>
+                        <option class="select-option" value="andijon">Xorazm</option>
+                        <option class="select-option" value="namangan">Namangan</option>
+                        <option class="select-option" value="navoiy">Navoiy</option>
+                        <option class="select-option" value="samarqand">Samarqand</option>
+                        <option class="select-option" value="surxondaryo">Surxondaryo</option>
+                        <option class="select-option" value="sirdaryo">Sirdaryo</option>
+                        <option class="select-option" value="toshkent">Toshkent</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="input-label" for="city">Shaxar</label>
+                    <input class="form-input" type="text" id="city" name="city" placeholder="Shaxringizni yozing" title="Shaxringizni yozing!" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="input-label" for="location">Yashash manzili</label>
+                    <input class="form-input" type="text" id="location" name="location" placeholder="Manzilingizni yozing" title="Yashash manzilingizni yozing!" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="input-label" for="post">Pochta indeksi</label>
+                    <input class="form-input" type="text" id="post" name="post" placeholder="1234" title="Pochta indeksingizni yozing!" required>
+                </div>
+            </div>
+            <!-- /ADDRESS -->
+            
+            <!-- CONTACT -->
+            <div class="contact">
+                <h2 class="contact__title">Kontakt</h2>
+                
+                <div class="form-group">
+                    <label class="input-label" for="phone">Telefon</label>
+                    <input class="form-input" type="tel" id="phone" name="phone" pattern="^\998\d{9}$" placeholder="998 xxx xx xx" title="Telefon raqamingizni yozing!" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="input-label" for="email">Email</label>
+                    <input class="form-input" type="email" id="email" name="email" placeholder="john@mail.com" title="Elektron pochtangizni yozing!" required>
+                </div>
+            </div>
+            <!-- /CONTACT -->
+            
+            <!-- EVALUATION SECTION -->
+            <div class="evaluation">
+                <h2 class="evaluation__title">Mehmonxona xizmatlarini baholang</h2>
+                
+                <!-- OVERALL EXPERIENCE -->
+                <fieldset class="overall-experience">
+                    <legend class="overall-experience__legend">Mehmonxona sifati (Umumiy)</legend>
+                    
                     <div class="rates">
-                        <input type="radio" id="good" name="overall" value="Good">
-                        <label for="good">Yaxshi</label>
-
-                        <input type="radio" id="normal" name="overall" value="Normal">
-                        <label for="normal">O'rtacha</label>
-
-                        <input type="radio" id="bad" name="overall" value="Bad">
-                        <label for="bad">Yomon</label>
+                        <div class="rate">
+                            <input class="rate__input" type="radio" id="good-overall" name="overall" value="good">
+                            <label class="rate__label" for="good-overall">Yaxshi</label>
+                        </div>
+                        
+                        <div class="rate">
+                            <input class="rate__input" type="radio" id="normal-overall" name="overall" value="normal">
+                            <label class="rate__label" for="normal-overall">O'rtacha</label>
+                        </div>
+                        
+                        <div class="rate">
+                            <input class="rate__input" type="radio" id="bad-overall" name="overall" value="bad">
+                            <label class="rate__label" for="bad-overall">Yomon</label>
+                        </div>
                     </div>
                 </fieldset>
-
-                <!-- Staff Service -->
-                <fieldset>
-                    <legend>Xodimlar xizmati</legend>
-
+                <!-- /OVERALL EXPERIENCE -->
+                
+                <!-- STAFF SERVICE -->
+                <fieldset class="staff-service">
+                    <legend class="staff-service__legend">Xodimlar xizmati</legend>
+                    
                     <div class="rates">
-                        <input type="radio" id="good" name="staff" value="Good">
-                        <label for="good">Yaxshi</label>
-
-                        <input type="radio" id="normal" name="staff" value="Normal">
-                        <label for="normal">O'rtacha</label>
-
-                        <input type="radio" id="bad" name="staff" value="Bad">
-                        <label for="bad">Yomon</label>
+                        <div class="rate">
+                            <input class="rate__input" type="radio" id="good-staff" name="staff" value="good">
+                            <label class="rate__label" for="good-staff">Yaxshi</label>
+                        </div>
+                        
+                        <div class="rate">
+                            <input class="rate__input" type="radio" id="normal-staff" name="staff" value="normal">
+                            <label class="rate__label" for="normal-staff">O'rtacha</label>
+                        </div>
+                        
+                        <div class="rate">
+                            <input class="rate__input" type="radio" id="bad-staff" name="staff" value="bad">
+                            <label class="rate__label" for="bad-staff">Yomon</label>
+                        </div>
                     </div>
                 </fieldset>
-
-                <!-- Service -->
-                <fieldset>
-                    <legend>Servis xizmatlari</legend>
-
+                <!-- /STAFF SERVICE -->
+                
+                <!-- SERVICE -->
+                <fieldset class="service">
+                    <legend class="service__legend">Servis xizmatlari</legend>
+                    
                     <div class="rates">
-                        <input type="radio" id="good" name="service" value="Good">
-                        <label for="good">Yaxshi</label>
-
-                        <input type="radio" id="normal" name="service" value="Normal">
-                        <label for="normal">O'rtacha</label>
-
-                        <input type="radio" id="bad" name="service" value="Bad">
-                        <label for="bad">Yomon</label>
+                        <div class="rate">
+                            <input class="rate__input" type="radio" id="good-service" name="service" value="good">
+                            <label class="rate__label" for="good-service">Yaxshi</label>
+                        </div>
+                        
+                        <div class="rate">
+                            <input class="rate__input" type="radio" id="normal-service" name="service" value="normal">
+                            <label class="rate__label" for="normal-service">O'rtacha</label>
+                        </div>
+                        
+                        <div class="rate">
+                            <input class="rate__input" type="radio" id="bad-service" name="service" value="bad">
+                            <label class="rate__label" for="bad-service">Yomon</label>
+                        </div>
                     </div>
                 </fieldset>
-
-                <!-- Food & Dining -->
-                <fieldset>
-                    <legend>Ovqat sifati</legend>
-
+                <!-- /SERVICE -->
+                
+                <!-- FOOD & DINING -->
+                <fieldset class="food-dining">
+                    <legend class="food-dining__legend">Ovqat sifati</legend>
+                    
                     <div class="rates">
-                        <input type="radio" id="good" name="food" value="Good">
-                        <label for="good">Yaxshi</label>
-
-                        <input type="radio" id="normal" name="food" value="Normal">
-                        <label for="normal">O'rtacha</label>
-
-                        <input type="radio" id="bad" name="food" value="Bad">
-                        <label for="bad">Yomon</label>
+                        <div class="rate">
+                            <input class="rate__input" type="radio" id="good-food" name="food" value="good">
+                            <label class="rate__label" for="good-food">Yaxshi</label>
+                        </div>
+                        
+                        <div class="rate">
+                            <input class="rate__input" type="radio" id="normal-food" name="food" value="normal">
+                            <label class="rate__label" for="normal-food">O'rtacha</label>
+                        </div>
+                        
+                        <div class="rate">
+                            <input class="rate__input" type="radio" id="bad-food" name="food" value="bad">
+                            <label class="rate__label" for="bad-food">Yomon</label>
+                        </div>
                     </div>
                 </fieldset>
-
-                <!-- Internet speed -->
-                <fieldset>
-                    <legend>Internet tezligi</legend>
-
+                <!-- /FOOD & DINING -->
+                
+                <!-- INTERNET SPEED -->
+                <fieldset class="internet-speed">
+                    <legend class="internet-speed__legend">Internet tezligi</legend>
+                    
                     <div class="rates">
-                        <input type="radio" id="good" name="internet" value="Good">
-                        <label for="good">Yaxshi</label>
-
-                        <input type="radio" id="normal" name="internet" value="Normal">
-                        <label for="normal">O'rtacha</label>
-
-                        <input type="radio" id="bad" name="internet" value="Bad">
-                        <label for="bad">Yomon</label>
+                        <div class="rate">
+                            <input class="rate__input" type="radio" id="good-internet" name="internet" value="good">
+                            <label class="rate__label" for="good-internet">Yaxshi</label>
+                        </div>
+                        
+                        <div class="rate">
+                            <input class="rate__input" type="radio" id="normal-internet" name="internet" value="normal">
+                            <label class="rate__label" for="normal-internet">O'rtacha</label>
+                        </div>
+                        
+                        <div class="rate">
+                            <input class="rate__input" type="radio" id="bad-internet" name="internet" value="bad">
+                            <label class="rate__label" for="bad-internet">Yomon</label>
+                        </div>
                     </div>
                 </fieldset>
-
-                <!-- Room Cleanliness -->
-                <fieldset>
-                    <legend>Xona tozaligi</legend>
-
+                <!-- /INTERNET SPEED -->
+                
+                <!-- ROOM CLEANLINESS -->
+                <fieldset class="room-cleanlinees">
+                    <legend class="room-cleanlinees__legend">Xona tozaligi</legend>
+                    
                     <div class="rates">
-                        <input type="radio" id="good" name="room" value="Good">
-                        <label for="good">Yaxshi</label>
-
-                        <input type="radio" id="normal" name="room" value="Normal">
-                        <label for="normal">O'rtacha</label>
-
-                        <input type="radio" id="bad" name="room" value="Bad">
-                        <label for="bad">Yomon</label>
+                        <div class="rate">
+                            <input class="rate__input" type="radio" id="good-room" name="room" value="good">
+                            <label class="rate__label" for="good-room">Yaxshi</label>
+                        </div>
+                        
+                        <div class="rate">
+                            <input class="rate__input" type="radio" id="normal-room" name="room" value="normal">
+                            <label class="rate__label" for="normal-room">O'rtacha</label>
+                        </div>
+                        
+                        <div class="rate">
+                            <input class="rate__input" type="radio" id="bad-room" name="room" value="bad">
+                            <label class="rate__label" for="bad-room">Yomon</label>
+                        </div>
                     </div>
                 </fieldset>
-             </div>
-            <input type="submit" value="Submit"></input>
+                <!-- /ROOM CLEANLINESS -->
+            </div>
+            <!-- /EVALUATION SECTION -->
+            
+            <input class="submit-btn" type="submit" value="Submit">
         </form>
-    </body>
+        <!--/FORM SECTION-->
+    </div>
+</body>
+
 </html>
+
+<!-- HTML kodlar https://validator.w3.org/nu/ sayti orqali validatsiyadan o'tkazildi! -->

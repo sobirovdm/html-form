@@ -1,0 +1,54 @@
+/* GLOBAL STYLES */
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before { box-sizing: inherit; }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: hsl(0, 0%, 95%);
+}
+
+h2 { margin: 2rem 0 .5rem; }
+
+.container {
+    width: 100%;
+    max-width: 640px;
+    padding: 20px;
+    margin: 2rem auto;
+    background-color: #fff;
+}
+
+/* FORM STYLES */
+.form__title,
+.evaluation__title { text-align: center; }
+
+.form-group,
+fieldset { margin-bottom: 1rem; }
+
+.form-input,
+.form-select,
+.submit-btn {
+    width: 100%;
+    padding: 8px;
+}
+
+.gender,
+.rates {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.submit-btn {
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* CSS kodlar https://validator.w3.org/nu/ sayti orqali validatsiyadan o'tkazildi! */
